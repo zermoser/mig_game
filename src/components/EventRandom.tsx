@@ -115,7 +115,7 @@ const EventRandom: React.FC = () => {
 
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-8 sm:mb-10 tracking-tight flex justify-center items-center gap-3 drop-shadow-2xl">
                             <span className="inline-block animate-pulse text-yellow-300">⚡</span>
-                            <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">เหตุการณ์สุ่ม</span>
+                            <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">Unexpected</span>
                             <span className="inline-block animate-pulse text-yellow-300">⚡</span>
                         </h1>
 
