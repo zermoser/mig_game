@@ -1,9 +1,9 @@
 {
-  "name": "mos_chat",
+  "name": "mig_game",
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://zermoser.github.io/mos_chat",
+  "homepage": "https://zermoser.github.io/mig_game",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
