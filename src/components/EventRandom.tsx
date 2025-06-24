@@ -38,7 +38,7 @@ const EventRandom: React.FC = () => {
     const formatAmount = (amount?: number): string => {
         if (amount === undefined) return '';
         const sign = amount > 0 ? '+' : '';
-        return `${sign}${(amount / 1000).toFixed(0)}K บาท`;
+        return `${sign}${(amount / 1000).toFixed(0)}K`;
     };
 
     const getAmountColor = (amount?: number): string => {
