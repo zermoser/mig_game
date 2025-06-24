@@ -1,9 +1,9 @@
-import ChatbotUI from './components/ChatbotUI';
+import EventRandom from './components/EventRandom';
 
 function App() {
   return (
     <div>
-      <ChatbotUI />
+      <EventRandom />
     </div>
   );
 }
