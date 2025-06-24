@@ -28,7 +28,7 @@ const EventRandom: React.FC = () => {
             const randomIndex = Math.floor(Math.random() * events.length);
             setEvent(events[randomIndex]);
             setIsAnimating(false);
-        }, 800);
+        }, 4000);
     };
 
     useEffect(() => {
@@ -85,7 +85,7 @@ const EventRandom: React.FC = () => {
     const cardTheme = getCardTheme(event?.amount);
 
     return (
-        <div className={`min-h-screen ${getBgTheme(event?.amount)} flex items-center justify-center p-4 sm:p-6 lg:p-8 transition-all duration-1000 ease-in-out relative overflow-hidden`}>
+        <div className={`min-h-screen ${getBgTheme(event?.amount)} flex justify-center p-4 sm:p-6 lg:p-8 transition-all duration-1000 ease-in-out relative overflow-hidden`}>
             {/* Floating particles */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/20 rounded-full animate-ping"></div>
@@ -151,9 +151,9 @@ const EventRandom: React.FC = () => {
                             </div>
                         ) : (
                             <div className="space-y-8 sm:space-y-10">
-                                <div className="text-8xl sm:text-9xl animate-spin drop-shadow-2xl">🎲</div>
+                                <div className="text-8xl sm:text-9xl animate-tilt drop-shadow-2xl">🏢</div>
                                 <div className="text-xl sm:text-2xl text-gray-200 font-bold drop-shadow-lg">
-                                    กำลังสุ่มเหตุการณ์...
+                                    เกิดแผ่นดินไหว...
                                 </div>
                                 <div className="flex justify-center space-x-3">
                                     <div className="w-4 h-4 bg-white/60 rounded-full animate-bounce shadow-lg" style={{ animationDelay: '0ms' }}></div>
