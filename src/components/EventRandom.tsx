@@ -85,7 +85,7 @@ const EventRandom: React.FC = () => {
     const cardTheme = getCardTheme(event?.amount);
 
     return (
-        <div className={`min-h-screen ${getBgTheme(event?.amount)} flex justify-center p-4 sm:p-6 lg:p-8 transition-all duration-1000 ease-in-out relative overflow-hidden`}>
+        <div className={`min-h-screen ${getBgTheme(event?.amount)} flex items-center justify-center transition-all duration-1000 ease-in-out relative overflow-hidden`}>
             {/* Floating particles */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/20 rounded-full animate-ping"></div>
