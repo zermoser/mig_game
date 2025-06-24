@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import previewSiteImg from './public/images/previewSiteImg.png';
+import previewSiteImg from '../public/images/previewSiteImg.jpg';
 
 interface Event {
     title: string;
@@ -136,20 +136,16 @@ const EventRandom: React.FC = () => {
                                 )}
 
                                 {event.amount !== undefined && (
-                                    <div className={`text-3xl sm:text-4xl lg:text-5xl font-black ${getAmountColor(event.amount)} bg-black/40 border-2 ${event.amount > 0 ? 'border-emerald-400/50' : 'border-red-400/50'} rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl transform transition-all duration-300 hover:scale-110 hover:rotate-1 cursor-pointer group`}
-                                        onClick={selectRandomEvent}>
+                                    <div className={`text-3xl sm:text-4xl lg:text-5xl font-black ${getAmountColor(event.amount)} bg-black/40 border-2 ${event.amount > 0 ? 'border-emerald-400/50' : 'border-red-400/50'} rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl transform transition-all duration-300 hover:scale-110 hover:rotate-1 cursor-pointer group`}>
                                         <div className="group-hover:animate-pulse">
                                             {formatAmount(event.amount)}
-                                        </div>
-                                        <div className="text-xs sm:text-sm text-gray-300 mt-2 opacity-70 group-hover:opacity-100 transition-opacity">
-                                            คลิกเพื่อสุ่มใหม่
                                         </div>
                                     </div>
                                 )}
 
                                 {event.note && (
                                     <div className="text-sm sm:text-base text-yellow-100 bg-yellow-900/40 border border-yellow-500/30 rounded-2xl p-5 sm:p-6 backdrop-blur-md shadow-inner">
-                                        <span className="font-bold text-yellow-300">📝 หมายเหตุ:</span> {event.note}
+                                        <span className="font-bold text-yellow-300"> หมายเหตุ:</span> {event.note}
                                     </div>
                                 )}
                             </div>
