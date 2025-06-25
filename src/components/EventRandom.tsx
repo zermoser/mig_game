@@ -176,18 +176,18 @@ const EventRandom: React.FC = () => {
     const [currentCategory, setCurrentCategory] = useState<EventCategory | null>(null);
     const [currentEvents, setCurrentEvents] = useState<Event[]>(defaultEvents);
 
-    useEffect(() => {
-        // เตือนผู้ใช้หากพยายาม refresh หรือออกจากหน้า
-        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-            event.preventDefault();
-            event.returnValue = '';
-        };
+    // useEffect(() => {
+    //     // เตือนผู้ใช้หากพยายาม refresh หรือออกจากหน้า
+    //     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+    //         event.preventDefault();
+    //         event.returnValue = '';
+    //     };
 
-        window.addEventListener('beforeunload', handleBeforeUnload);
-        return () => {
-            window.removeEventListener('beforeunload', handleBeforeUnload);
-        };
-    }, []);
+    //     window.addEventListener('beforeunload', handleBeforeUnload);
+    //     return () => {
+    //         window.removeEventListener('beforeunload', handleBeforeUnload);
+    //     };
+    // }, []);
 
     // อ่าน query parameters
     useEffect(() => {
@@ -273,8 +273,8 @@ const EventRandom: React.FC = () => {
     const cardTheme = getCardTheme(event?.amount);
 
     return (
-        <div className={`min-h-screen ${getBgTheme(event?.amount)} flex items-center justify-center transition-all duration-1000 ease-in-out relative overflow-hidden`}>
-            {/* Enhanced floating particles */}
+        <div className={`min-h-screen ${getBgTheme(event?.amount)} flex items-start pt-8 justify-center transition-all duration-1000 ease-in-out relative overflow-hidden`}>
+            {/* Floating Particles */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-white/25 rounded-full animate-ping"></div>
                 <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-white/35 rounded-full animate-pulse"></div>
@@ -289,7 +289,8 @@ const EventRandom: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
             </div>
 
-            <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg relative z-10">
+            {/* Card Container */}
+            <div className="w-full px-10 lg:max-w-lg relative z-10">
                 <div className={`${cardTheme.bg} ${cardTheme.border} border-2 rounded-3xl sm:rounded-[2rem] lg:rounded-[3rem] ${cardTheme.shadow} p-8 sm:p-10 lg:p-12 text-center backdrop-blur-xl relative overflow-hidden transition-all duration-700 ease-out transform ${isAnimating ? 'scale-95 rotate-1' : 'scale-100 rotate-0 hover:scale-105'}`}>
 
                     {/* Enhanced decorative elements */}
