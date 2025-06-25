@@ -63,10 +63,8 @@ const eventCategories: Record<string, EventCategory> = {
         events: [
             { title: 'โดนปล้นเงินในกระเป๋า', description: 'เสียเงินสด', amount: -15000, icon: '💰' },
             { title: 'โจรปล้นธนาคาร', description: 'ได้รับบาดเจ็บ', amount: -25000, icon: '🏦' },
-            { title: 'จับโจรได้', description: 'รางวัลจากตำรวจ', amount: +20000, icon: '👮' },
-            { title: 'โดนปล้นแต่ของปลอม', description: 'แอบขำได้', amount: +0, icon: '😏' },
+            { title: 'จับโจรได้', description: 'รางวัลจากตำรวจ', amount: +500, icon: '👮' },
             { title: 'หลบโจรได้ทัน', note: 'รอดชีวิต พัก 1 ตา', icon: '🏃' },
-            { title: 'ทำตัวเป็นโจร', description: 'ได้เงินมาผิดกฎหมาย', amount: +30000, icon: '🥷' },
         ]
     },
     'accident': {
@@ -162,19 +160,6 @@ const EventRandom: React.FC = () => {
     const [isAnimating, setIsAnimating] = useState(false);
     const [currentCategory, setCurrentCategory] = useState<EventCategory | null>(null);
     const [currentEvents, setCurrentEvents] = useState<Event[]>(defaultEvents);
-
-    useEffect(() => {
-        // เตือนผู้ใช้หากพยายาม refresh หรือออกจากหน้า
-        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-            event.preventDefault();
-            event.returnValue = '';
-        };
-
-        window.addEventListener('beforeunload', handleBeforeUnload);
-        return () => {
-            window.removeEventListener('beforeunload', handleBeforeUnload);
-        };
-    }, []);
 
     // อ่าน query parameters
     useEffect(() => {
