@@ -105,7 +105,6 @@ const eventCategories: Record<string, EventCategory> = {
             { title: 'รอดชีวิตแต่ต้องย้ายออก', description: 'เสียค่าที่พักชั่วคราว', amount: -20000, icon: '🛏️' },
             { title: 'ประกันไฟไหม้ช่วยไว้', description: 'ได้เงินชดเชย', amount: +80000, icon: '🧾' },
             { title: 'ช่วยดับไฟทัน', description: 'ลดความเสียหาย', amount: -10000, icon: '🧯' },
-            { title: 'สัตว์เลี้ยงหนีรอด', description: 'ยังดีที่ไม่สูญเสียทุกอย่าง', amount: 0, icon: '🐶' },
         ]
     },
     'sickness': {
@@ -118,7 +117,6 @@ const eventCategories: Record<string, EventCategory> = {
             { title: 'ลาป่วยไม่ได้ทำงาน', description: 'รายได้หายไป', amount: -20000, icon: '🛌' },
             { title: 'ประกันสุขภาพจ่ายให้บางส่วน', description: 'ช่วยลดภาระ', amount: +30000, icon: '📄' },
             { title: 'ญาติช่วยออกค่ารักษา', description: 'น้ำใจมีค่ามาก', amount: +10000, icon: '🤝' },
-            { title: 'หายดีแล้ว', description: 'กลับมาใช้ชีวิตได้', amount: 0, icon: '😊' },
         ]
     },
     'travelIssue': {
@@ -258,7 +256,7 @@ const EventRandom: React.FC = () => {
     const cardTheme = getCardTheme(event?.amount);
 
     return (
-        
+
         <div className={`min-h-screen ${getBgTheme(event?.amount)} flex items-center justify-center transition-all duration-1000 ease-in-out relative overflow-hidden`}>
             {/* Floating Particles */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
