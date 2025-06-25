@@ -83,15 +83,15 @@ const eventCategories: Record<string, EventCategory> = {
         ]
     },
     'lottery': {
-        name: 'การพนัน/หวย',
+        name: 'หวย',
         loadingIcon: '🎰',
         loadingText: 'กำลังออกผล...',
         events: [
             { title: 'ถูกหวยรางวัลที่ 1', description: 'โชคดีครั้งใหญ่!', amount: +600000, icon: '🎊' },
             { title: 'เสียเงินซื้อหวย', description: 'ไม่ถูกสักใบ', amount: -5000, icon: '🎫' },
             { title: 'ถูกหวยท้าย 2 ตัว', description: 'โชคดีเล็กน้อย', amount: +6000, icon: '🎉' },
-            { title: 'เล่นการพนันออนไลน์', description: 'เสียเงินจนหมดตัว', amount: -100000, icon: '💸' },
-            { title: 'เลิกเล่นการพนัน', note: 'พัก 1 ตา เพื่อฟื้นฟู', icon: '🧘' },
+            { title: 'เล่นหวยออนไลน์', description: 'เสียเงินจนหมดตัว', amount: -100000, icon: '💸' },
+            { title: 'เลิกเล่นหวย', note: 'พัก 1 ตา เพื่อฟื้นฟู', icon: '🧘' },
             { title: 'ฝันเลขแม่น', description: 'ซื้อหวยถูก', amount: +12000, icon: '💭' },
         ]
     },
