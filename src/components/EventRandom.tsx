@@ -302,15 +302,6 @@ const EventRandom: React.FC = () => {
                     <div className="absolute inset-0 rounded-3xl sm:rounded-[2rem] lg:rounded-[3rem] bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 animate-pulse"></div>
 
                     <div className="relative z-10">
-                        {/* Category badge */}
-                        {currentCategory && (
-                            <div className="mb-6">
-                                <div className="text-8xl inline-flex items-center gap-2 bg-black/40 border border-white/30 rounded-full px-4 py-2 font-semibold text-white backdrop-blur-md">
-                                    {currentCategory.loadingIcon} {currentCategory.name}
-                                </div>
-                            </div>
-                        )}
-
                         <div className="mb-8">
                             <div className="relative inline-block">
                                 <img src={previewSiteImg} alt="Logo" className="w-20 h-20 sm:w-24 sm:h-24 mx-auto border-4 border-white/40 rounded-2xl shadow-2xl backdrop-blur-sm" />
@@ -318,7 +309,7 @@ const EventRandom: React.FC = () => {
                             </div>
                         </div>
 
-                        <h1 className="text-6xl font-black text-white mb-8 sm:mb-10 tracking-tight flex justify-center items-center gap-3 drop-shadow-2xl">
+                        <h1 className="text-5xl font-black text-white mb-8 sm:mb-10 tracking-tight flex justify-center items-center gap-3 drop-shadow-2xl">
                             <span className="inline-block animate-pulse text-yellow-300">⚡</span>
                             <span className="bg-gradient-to-r from-white via-yellow-100 to-white bg-clip-text text-transparent">Unexpected</span>
                             <span className="inline-block animate-pulse text-yellow-300">⚡</span>
@@ -330,18 +321,18 @@ const EventRandom: React.FC = () => {
                                     {event.icon}
                                 </div>
 
-                                <div className="text-8xl font-bold text-white leading-relaxed px-4 drop-shadow-lg">
+                                <div className="text-5xl font-bold text-white leading-relaxed px-4 drop-shadow-lg">
                                     {event.title}
                                 </div>
 
                                 {event.description && (
-                                    <div className="text-8xl text-gray-100 bg-black/40 border border-white/30 rounded-2xl p-5 sm:p-6 backdrop-blur-md shadow-inner">
+                                    <div className="text-5xl text-gray-100 bg-black/40 border border-white/30 rounded-2xl p-5 sm:p-6 backdrop-blur-md shadow-inner">
                                         {event.description}
                                     </div>
                                 )}
 
                                 {event.amount !== undefined && (
-                                    <div className={`text-8xl font-black ${getAmountColor(event.amount)} bg-black/50 border-2 ${event.amount > 0 ? 'border-emerald-400/60' : 'border-red-400/60'} rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl transform transition-all duration-300 hover:scale-110 hover:rotate-1 cursor-pointer group relative overflow-hidden`}>
+                                    <div className={`text-5xl font-black ${getAmountColor(event.amount)} bg-black/50 border-2 ${event.amount > 0 ? 'border-emerald-400/60' : 'border-red-400/60'} rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl transform transition-all duration-300 hover:scale-110 hover:rotate-1 cursor-pointer group relative overflow-hidden`}>
                                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                         <div className="relative z-10 group-hover:animate-pulse">
                                             {formatAmount(event.amount)}
