@@ -334,8 +334,8 @@ const EventRandom: React.FC = () => {
                                 )}
 
                                 {event.note && (
-                                    <div className="text-sm sm:text-base text-yellow-100 bg-yellow-900/50 border border-yellow-400/40 rounded-2xl p-5 sm:p-6 backdrop-blur-md shadow-inner">
-                                        <span className="font-bold text-yellow-300">📝 หมายเหตุ:</span> {event.note}
+                                    <div className="text-5xl text-yellow-100 bg-yellow-900/50 border border-yellow-400/40 rounded-2xl p-5 sm:p-6 backdrop-blur-md shadow-inner">
+                                        {event.note}
                                     </div>
                                 )}
                             </div>
