@@ -176,18 +176,18 @@ const EventRandom: React.FC = () => {
     const [currentCategory, setCurrentCategory] = useState<EventCategory | null>(null);
     const [currentEvents, setCurrentEvents] = useState<Event[]>(defaultEvents);
 
-    useEffect(() => {
-        // เตือนผู้ใช้หากพยายาม refresh หรือออกจากหน้า
-        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-            event.preventDefault();
-            event.returnValue = '';
-        };
+    // useEffect(() => {
+    //     // เตือนผู้ใช้หากพยายาม refresh หรือออกจากหน้า
+    //     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+    //         event.preventDefault();
+    //         event.returnValue = '';
+    //     };
 
-        window.addEventListener('beforeunload', handleBeforeUnload);
-        return () => {
-            window.removeEventListener('beforeunload', handleBeforeUnload);
-        };
-    }, []);
+    //     window.addEventListener('beforeunload', handleBeforeUnload);
+    //     return () => {
+    //         window.removeEventListener('beforeunload', handleBeforeUnload);
+    //     };
+    // }, []);
 
     // อ่าน query parameters
     useEffect(() => {
@@ -290,7 +290,7 @@ const EventRandom: React.FC = () => {
             </div>
 
             {/* Card Container */}
-            <div className="w-full px-10 lg:max-w-lg relative z-10">
+            <div className="w-full px-10 lg:max-w-lg relative z-10 mt-[-30px]">
                 <div className={`${cardTheme.bg} ${cardTheme.border} border-2 rounded-3xl sm:rounded-[2rem] lg:rounded-[3rem] ${cardTheme.shadow} p-8 sm:p-10 lg:p-12 text-center backdrop-blur-xl relative overflow-hidden transition-all duration-700 ease-out transform ${isAnimating ? 'scale-95 rotate-1' : 'scale-100 rotate-0 hover:scale-105'}`}>
 
                     {/* Enhanced decorative elements */}
@@ -308,6 +308,15 @@ const EventRandom: React.FC = () => {
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl"></div>
                             </div>
                         </div>
+
+                        {/* Category badge */}
+                        {currentCategory && (
+                            <div className="mb-4">
+                                <div className="text-2xl inline-flex items-center gap-2 bg-black/40 border border-white/30 rounded-full px-4 py-2 font-semibold text-white backdrop-blur-md">
+                                    {currentCategory.loadingIcon} {currentCategory.name}
+                                </div>
+                            </div>
+                        )}
 
                         <h1 className="text-5xl font-black text-white mb-8 sm:mb-10 tracking-tight flex justify-center items-center gap-3 drop-shadow-2xl">
                             <span className="inline-block animate-pulse text-yellow-300">⚡</span>
