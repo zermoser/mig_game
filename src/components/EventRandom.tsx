@@ -192,7 +192,7 @@ const EventRandom: React.FC = () => {
     // อ่าน query parameters
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
-        const eventType = urlParams.get('type')?.toLowerCase();
+        const eventType = urlParams.get('type');
 
         if (eventType && eventCategories[eventType]) {
             const category = eventCategories[eventType];
