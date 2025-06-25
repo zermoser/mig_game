@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import previewSiteImg from '../public/images/previewSiteImg.jpg';
+import previewSiteImg from '../images/previewSiteImg.jpg';
 
 interface Event {
     title: string;
