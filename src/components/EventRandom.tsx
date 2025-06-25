@@ -222,7 +222,7 @@ const EventRandom: React.FC = () => {
     const formatAmount = (amount?: number): string => {
         if (amount === undefined) return '';
         const sign = amount > 0 ? '+' : '';
-        return `${sign}${(amount / 1000).toFixed(0)}K`;
+        return `${sign}${(amount / 1000).toFixed(0)} K`;
     };
 
     const getAmountColor = (amount?: number): string => {
@@ -336,13 +336,13 @@ const EventRandom: React.FC = () => {
                                 </div>
 
                                 {event.description && (
-                                    <div className="text-base sm:text-lg text-gray-100 bg-black/40 border border-white/30 rounded-2xl p-5 sm:p-6 backdrop-blur-md shadow-inner">
+                                    <div className="text-xl sm:text-2xl lg:text-3xl text-gray-100 bg-black/40 border border-white/30 rounded-2xl p-5 sm:p-6 backdrop-blur-md shadow-inner">
                                         {event.description}
                                     </div>
                                 )}
 
                                 {event.amount !== undefined && (
-                                    <div className={`text-3xl sm:text-4xl lg:text-5xl font-black ${getAmountColor(event.amount)} bg-black/50 border-2 ${event.amount > 0 ? 'border-emerald-400/60' : 'border-red-400/60'} rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl transform transition-all duration-300 hover:scale-110 hover:rotate-1 cursor-pointer group relative overflow-hidden`}>
+                                    <div className={`text-xl sm:text-2xl lg:text-3xl font-black ${getAmountColor(event.amount)} bg-black/50 border-2 ${event.amount > 0 ? 'border-emerald-400/60' : 'border-red-400/60'} rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl transform transition-all duration-300 hover:scale-110 hover:rotate-1 cursor-pointer group relative overflow-hidden`}>
                                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                         <div className="relative z-10 group-hover:animate-pulse">
                                             {formatAmount(event.amount)}
@@ -358,7 +358,7 @@ const EventRandom: React.FC = () => {
                             </div>
                         ) : (
                             <div className="space-y-8 sm:space-y-10">
-                                <div className="text-8xl sm:text-9xl animate-pulse drop-shadow-2xl animate-tilt">
+                                <div className="text-8xl sm:text-9xl animate-pulse drop-shadow-2xl animate-tilt animate-tilt">
                                     {currentCategory ? currentCategory.loadingIcon : '🏢'}
                                 </div>
                                 <div className="text-xl sm:text-2xl text-gray-100 font-bold drop-shadow-lg">
