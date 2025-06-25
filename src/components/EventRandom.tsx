@@ -176,18 +176,18 @@ const EventRandom: React.FC = () => {
     const [currentCategory, setCurrentCategory] = useState<EventCategory | null>(null);
     const [currentEvents, setCurrentEvents] = useState<Event[]>(defaultEvents);
 
-    // useEffect(() => {
-    //     // เตือนผู้ใช้หากพยายาม refresh หรือออกจากหน้า
-    //     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-    //         event.preventDefault();
-    //         event.returnValue = '';
-    //     };
+    useEffect(() => {
+        // เตือนผู้ใช้หากพยายาม refresh หรือออกจากหน้า
+        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+            event.preventDefault();
+            event.returnValue = '';
+        };
 
-    //     window.addEventListener('beforeunload', handleBeforeUnload);
-    //     return () => {
-    //         window.removeEventListener('beforeunload', handleBeforeUnload);
-    //     };
-    // }, []);
+        window.addEventListener('beforeunload', handleBeforeUnload);
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, []);
 
     // อ่าน query parameters
     useEffect(() => {
@@ -330,7 +330,7 @@ const EventRandom: React.FC = () => {
                                     {event.icon}
                                 </div>
 
-                                <div className="text-5xl font-bold text-white leading-relaxed px-4 drop-shadow-lg">
+                                <div className="text-6xl font-bold text-white leading-relaxed px-4 drop-shadow-lg">
                                     {event.title}
                                 </div>
 
@@ -360,7 +360,7 @@ const EventRandom: React.FC = () => {
                                 <div className="text-8xl sm:text-9xl animate-pulse drop-shadow-2xl animate-tilt animate-tilt">
                                     {currentCategory ? currentCategory.loadingIcon : '🏢'}
                                 </div>
-                                <div className="text-xl sm:text-2xl text-gray-100 font-bold drop-shadow-lg">
+                                <div className="text-xl sm:text-5xl text-gray-100 font-bold drop-shadow-lg">
                                     {currentCategory ? currentCategory.loadingText : 'เกิดแผ่นดินไหว...'}
                                 </div>
                                 <div className="flex justify-center space-x-3">
