@@ -14,7 +14,6 @@ interface EventCategory {
     events: Event[];
     loadingIcon: string;
     loadingText: string;
-    bgGradient: string;
 }
 
 const eventCategories: Record<string, EventCategory> = {
@@ -22,7 +21,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'อั่งเปา',
         loadingIcon: '🧧',
         loadingText: 'แจกอั่งเปา...',
-        bgGradient: 'from-red-800 via-yellow-700 to-orange-800',
         events: [
             { title: 'ได้อั่งเปาจากพ่อแม่', description: 'เงินรับช่วงตรุษจีน', amount: +2000, icon: '👨‍👩‍👧' },
             { title: 'ญาติให้ซองแดง', description: 'ได้รับอั่งเปาเพิ่ม', amount: +1500, icon: '🧑‍🦳' },
@@ -36,7 +34,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'แผ่นดินไหว',
         loadingIcon: '🏢',
         loadingText: 'เกิดแผ่นดินไหว...',
-        bgGradient: 'from-orange-900 via-red-900 to-yellow-950',
         events: [
             { title: 'บ้านพัง ต้องซ่อม', description: 'เสียค่าซ่อมแซม', amount: -50000, icon: '🏠' },
             { title: 'แผ่นดินไหวแรง 7.2', description: 'ความเสียหายรุนแรง', amount: -120000, icon: '🌋' },
@@ -50,7 +47,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'น้ำท่วม',
         loadingIcon: '🌊',
         loadingText: 'น้ำกำลังท่วม...',
-        bgGradient: 'from-blue-900 via-cyan-900 to-teal-950',
         events: [
             { title: 'รถจมน้ำ', description: 'ค่าซ่อมรถยนต์', amount: -45000, icon: '🚗' },
             { title: 'บ้านท่วมสูง 2 เมตร', description: 'ความเสียหายครั้งใหญ่', amount: -80000, icon: '🏘️' },
@@ -64,7 +60,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'โจรปล้น',
         loadingIcon: '🕵️',
         loadingText: 'มีโจรปรากฏตัว...',
-        bgGradient: 'from-gray-900 via-slate-900 to-zinc-950',
         events: [
             { title: 'โดนปล้นเงินในกระเป๋า', description: 'เสียเงินสด', amount: -15000, icon: '💰' },
             { title: 'โจรปล้นธนาคาร', description: 'ได้รับบาดเจ็บ', amount: -25000, icon: '🏦' },
@@ -78,7 +73,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'อุบัติเหตุ',
         loadingIcon: '🚑',
         loadingText: 'เกิดอุบัติเหตุ...',
-        bgGradient: 'from-red-900 via-orange-900 to-pink-950',
         events: [
             { title: 'ล้มหัวแตก', description: 'เสียค่ารักษา', amount: -5000, icon: '🤕' },
             { title: 'ช็อกเส้นเลือดในสมองแตง', description: 'เสียค่ารักษา', amount: -80000, icon: '💥' },
@@ -92,7 +86,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'การพนัน/หวย',
         loadingIcon: '🎰',
         loadingText: 'กำลังออกผล...',
-        bgGradient: 'from-purple-900 via-indigo-900 to-blue-950',
         events: [
             { title: 'ถูกหวยรางวัลที่ 1', description: 'โชคดีครั้งใหญ่!', amount: +600000, icon: '🎊' },
             { title: 'เสียเงินซื้อหวย', description: 'ไม่ถูกสักใบ', amount: -5000, icon: '🎫' },
@@ -106,7 +99,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'ไฟไหม้',
         loadingIcon: '🔥',
         loadingText: 'ไฟกำลังลุกลาม...',
-        bgGradient: 'from-red-800 via-yellow-800 to-orange-900',
         events: [
             { title: 'ไฟไหม้บ้าน', description: 'เสียหายหนักมาก', amount: -150000, icon: '🏚️' },
             { title: 'ของมีค่าเสียหาย', description: 'เสียทองคำและของสะสม', amount: -50000, icon: '📦' },
@@ -120,7 +112,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'เจ็บป่วยหนัก',
         loadingIcon: '🦠',
         loadingText: 'มีอาการป่วย...',
-        bgGradient: 'from-purple-800 via-rose-900 to-indigo-950',
         events: [
             { title: 'ป่วยโรคร้ายแรง', description: 'ค่ารักษามหาศาล', amount: -120000, icon: '🏥' },
             { title: 'ต้องผ่าตัดด่วน', description: 'จ่ายค่าผ่าตัด', amount: -60000, icon: '🔪' },
@@ -134,7 +125,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'ปัญหาระหว่างเดินทาง',
         loadingIcon: '✈️',
         loadingText: 'กำลังเดินทาง...',
-        bgGradient: 'from-cyan-900 via-blue-800 to-slate-950',
         events: [
             { title: 'เที่ยวบินยกเลิก', description: 'จ่ายค่าโรงแรมเพิ่ม', amount: -10000, icon: '🛬' },
             { title: 'กระเป๋าหาย', description: 'ของหายหมด', amount: -25000, icon: '🎒' },
@@ -148,7 +138,6 @@ const eventCategories: Record<string, EventCategory> = {
         name: 'คดีความ',
         loadingIcon: '⚖️',
         loadingText: 'กำลังเข้าสู่กระบวนการยุติธรรม...',
-        bgGradient: 'from-gray-900 via-indigo-900 to-purple-950',
         events: [
             { title: 'โดนฟ้องละเมิดลิขสิทธิ์', description: 'เสียค่าปรับ', amount: -30000, icon: '📄' },
             { title: 'ต้องจ้างทนาย', description: 'ค่าทนายความ', amount: -20000, icon: '👨‍⚖️' },
@@ -255,10 +244,6 @@ const EventRandom: React.FC = () => {
     };
 
     const getBgTheme = (amount?: number): string => {
-        if (currentCategory) {
-            return `bg-gradient-to-br ${currentCategory.bgGradient}`;
-        }
-
         if (amount === undefined) {
             return 'bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-950';
         }
@@ -273,6 +258,7 @@ const EventRandom: React.FC = () => {
     const cardTheme = getCardTheme(event?.amount);
 
     return (
+        
         <div className={`min-h-screen ${getBgTheme(event?.amount)} flex items-center justify-center transition-all duration-1000 ease-in-out relative overflow-hidden`}>
             {/* Floating Particles */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
