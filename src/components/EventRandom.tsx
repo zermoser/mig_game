@@ -176,18 +176,18 @@ const EventRandom: React.FC = () => {
     const [currentCategory, setCurrentCategory] = useState<EventCategory | null>(null);
     const [currentEvents, setCurrentEvents] = useState<Event[]>(defaultEvents);
 
-    // useEffect(() => {
-    //     // เตือนผู้ใช้หากพยายาม refresh หรือออกจากหน้า
-    //     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-    //         event.preventDefault();
-    //         event.returnValue = '';
-    //     };
+    useEffect(() => {
+        // เตือนผู้ใช้หากพยายาม refresh หรือออกจากหน้า
+        const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+            event.preventDefault();
+            event.returnValue = '';
+        };
 
-    //     window.addEventListener('beforeunload', handleBeforeUnload);
-    //     return () => {
-    //         window.removeEventListener('beforeunload', handleBeforeUnload);
-    //     };
-    // }, []);
+        window.addEventListener('beforeunload', handleBeforeUnload);
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, []);
 
     // อ่าน query parameters
     useEffect(() => {
